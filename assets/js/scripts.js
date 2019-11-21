@@ -53,13 +53,13 @@ function initScript() {
         for (let i = 0; i < times.length; i++) {
             $('#container').append(`
             <div class="row make-margin">
-                <div class="col-1 hour no-padding d-flex justify-content-center align-items-center" id=timeBlock`+ i +`>
+                <div class="col-3 col-md-1 hour no-padding d-flex justify-content-center align-items-center" id=timeBlock`+ i +`>
                     `+ times[i].time + `
                 </div>
-                <div class="col-10 no-padding">
+                <div class="col-6 col-md-10 no-padding">
                     <textarea class="description" id="textArea`+ i + `"></textarea>
                 </div>
-                <div class="col-1 time-block no-padding">
+                <div class="col-3 col-md-1 time-block no-padding">
                      <button class=saveBtn id="saveBtn`+ i + `"><img src="https://image.flaticon.com/icons/png/512/17/17636.png" class="lock"></button>
                 </div>
             </div>
