@@ -1,6 +1,7 @@
 function initScript() {
     let time;
     const timeEl = document.getElementById("currentDay");
+    let hourMoment= moment().get('hour');
 
     const times = [{
         time: "9AM",
@@ -63,12 +64,12 @@ function initScript() {
                 </div>
             </div>
             `);
-            const timeBlockEl = document.getElementById(`timeBlock` + i);
             const saveEl = document.getElementById(`saveBtn` + i);
             const inputEl = document.getElementById(`textArea` + i);
             let savedValue = JSON.parse(localStorage.getItem("inputEl" + i));
             
             colorify(inputEl, times, i);
+
             if (savedValue) {
                 inputEl.value = savedValue;
             }
@@ -85,18 +86,21 @@ function initScript() {
 
     function startClock() {
         myInterval = setInterval(function () {
+            hourMoment = moment().get('hour');
             time = moment().format('MMMM Do YYYY, h:mm:ss a');
             timeEl.innerText = time;
         }, 1000);
     } startClock();
 
     function colorify(inputEl, times, i){
-        if (times[i].timeValue < 14){
+        let timeTimeValue = times[i].timeValue;
+        if (timeTimeValue < hourMoment){
             inputEl.classList.add("past");
-        } else if (times[i].timeValue = 14) {
+        } 
+        else if (timeTimeValue === hourMoment) {
             inputEl.classList.add("present");
         } 
-        else if (times[i].timeValue > 14) {
+        else if (timeTimeValue > hourMoment) {
             inputEl.classList.add("future");
         }
     }
