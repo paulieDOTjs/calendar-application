@@ -52,8 +52,8 @@ function initScript() {
 
         for (let i = 0; i < times.length; i++) {
             $('#container').append(`
-            <div class="row">
-                <div class="col-1 hour no-padding d-flex justify-content-end align-items-center" id=timeBlock`+ i +`>
+            <div class="row make-margin">
+                <div class="col-1 hour no-padding d-flex justify-content-center align-items-center" id=timeBlock`+ i +`>
                     `+ times[i].time + `
                 </div>
                 <div class="col-10 no-padding">
