@@ -4,6 +4,6 @@ A simple day planner app. At the top the app will have the current tiime and dat
 
 Live site found here: https://paulrobhendrickson.github.io/calendar-application/
 
-![alt text](https://github.com/paulrobhendrickson/calendar-application/blob/master/assets/images/full-screen.png)
+![full-screen](https://github.com/paulrobhendrickson/calendar-application/blob/master/assets/images/full-screen.png)
 
-![alt text](https://github.com/paulrobhendrickson/calendar-application/blob/master/assets/images/small-screen.png)
+![small-screen](https://github.com/paulrobhendrickson/calendar-application/blob/master/assets/images/small-screen.png)
